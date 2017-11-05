@@ -1,7 +1,7 @@
 CREATE TABLE COMPANIA(
 	Nombre varchar(50) NOT NULL,
 	Sede varchar(50),
-	Activo bit NOT NULL,
+	Activo boolean NOT NULL,
 	PRIMARY KEY (Nombre)
 );
 
@@ -11,14 +11,14 @@ CREATE TABLE SUCURSAL(
 	Ciudad varchar(20),
 	Senas varchar(50),
 	Descripcion varchar(50),
-    Activo bit NOT NULL,
+    Activo boolean NOT NULL,
 	Compania varchar(50) NOT NULL,
 	PRIMARY KEY (Nombre)
 );
 
 CREATE TABLE CAJA(
 	Id int NOT NULL,
-    Activo bit NOT NULL,
+    Activo boolean NOT NULL,
     Sucursal varchar(50) NOT NULL,
     PRIMARY KEY (Id)
 );
@@ -34,7 +34,7 @@ CREATE TABLE EMPLEADO(
 	Senas varchar(50),
 	FechaNacimiento date NOT NULL,
 	Contrasena varchar(200) NOT NULL,
-	Activo bit NOT NULL,
+	Activo boolean NOT NULL,
     Sucursal varchar(50) NOT NULL,
 	Rol varchar(20) NOT NULL,
 	PRIMARY KEY (Cedula)
@@ -43,7 +43,7 @@ CREATE TABLE EMPLEADO(
 CREATE TABLE ROL(
 	Nombre varchar(20) NOT NULL,
 	Descripcion varchar(50),
-	Activo bit NOT NULL,
+	Activo boolean NOT NULL,
 	PRIMARY KEY (Nombre)
 );
 
@@ -59,14 +59,14 @@ CREATE TABLE CLIENTE(
 	FechaNacimiento date NOT NULL,
     Contrasena varchar(200) NOT NULL,
 	Prioridad int NOT NULL,
-	Activo bit NOT NULL,
+	Activo boolean NOT NULL,
 	PRIMARY KEY (Cedula)
 );
 
 CREATE TABLE TELEFONOXCLIENTE(
 	Cliente int NOT NULL,
 	Telefono int NOT NULL,
-	Activo bit NOT NULL,
+	Activo boolean NOT NULL,
 	PRIMARY KEY (Cliente,Telefono)
 );
 
@@ -74,14 +74,14 @@ CREATE TABLE PADECIMIENTO(
     Cliente int NOT NULL,
 	Padecimiento varchar(50) NOT NULL,
 	Ano int NOT NULL,
-	Activo bit NOT NULL,
+	Activo boolean NOT NULL,
 	PRIMARY KEY (Cliente,Padecimiento,Ano)
 );
 
 CREATE TABLE PROVEEDOR(
 	Nombre varchar(50) NOT NULL,
 	Sede varchar(50),
-	Activo bit NOT NULL,
+	Activo boolean NOT NULL,
 	PRIMARY KEY (Nombre)
 );
 
@@ -89,7 +89,7 @@ CREATE TABLE MEDICAMENTO(
 	Nombre varchar(50) NOT NULL,
     Precio int NOT NULL,
 	Prescripcion bit NOT NULL,
-    Activo bit NOT NULL,
+    Activo boolean NOT NULL,
 	Proveedor varchar(50) NOT NULL,
 	PRIMARY KEY (Nombre)
 );
@@ -99,7 +99,7 @@ CREATE TABLE FACTURA(
     Fecha date NOT NULL,
     Hora time NOT NULL,
     Total int NOT NULL,
-    Activo bit NOT NULL,
+    Activo boolean NOT NULL,
     Caja int NOT NULL,
     Empleado int NOT NULL,
     Cliente int NOT NULL,
@@ -109,7 +109,7 @@ CREATE TABLE FACTURA(
 CREATE TABLE ADMINISTRADORXSUCURSAL(
 	Administrador int NOT NULL,
 	Sucursal varchar(50) NOT NULL,
-	Activo bit NOT NULL,
+	Activo boolean NOT NULL,
 	PRIMARY KEY (Administrador,Sucursal)
 );
 
@@ -117,7 +117,7 @@ CREATE TABLE MEDICAMENTOXFACTURA(
 	Medicamento varchar(50) NOT NULL,
     Factura int NOT NULL,
     Cantidad int NOT NULL,
-    Activo bit NOT NULL,
+    Activo boolean NOT NULL,
     PRIMARY KEY(Medicamento,Factura)
 );
 
@@ -127,7 +127,7 @@ CREATE TABLE MEDICAMENTOXSUCURSAL(
     Cantidad int NOT NULL,
     StockMinimo int NOT NULL,
     StockPromedio int NOT NULL,
-    Activo bit NOT NULL,
+    Activo boolean NOT NULL,
     PRIMARY KEY(Medicamento,Sucursal)
 );
 
@@ -140,7 +140,7 @@ CREATE TABLE EMPLEADOXCAJA(
     HoraFinal time NOT NULL,
     EfectivoInicial int NOT NULL,
     EfectivoFinal int NOT NULL,
-    Activo bit NOT NULL,
+    Activo boolean NOT NULL,
     PRIMARY KEY(Empleado,Caja)
 );
 
