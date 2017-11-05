@@ -33,37 +33,37 @@ INSERT INTO ROL(Nombre,Descripcion,Activo)
      VALUES('Cajero','Control de dinero',true);
 
 INSERT INTO EMPLEADO(Cedula,Nombre1,Nombre2,Apellido1,Apellido2,Provincia,
-	Cuidad,Senas,FechaNacimiento,Contrasena,Sucursal,Activo,Rol)
+	Ciudad,Senas,FechaNacimiento,Contrasena,Sucursal,Activo,Rol)
      VALUES (303150415,'Pedro','Alberto','Perez','Lopez','Cartago','Tejar'
            ,'100 metros sur de Restaurante El Quijongo','15-02-1980'
 		   ,md5('1234'),'Phischel Central',true,'Administrador');
 
 INSERT INTO EMPLEADO(Cedula,Nombre1,Nombre2,Apellido1,Apellido2,Provincia,
-	Cuidad,Senas,FechaNacimiento,Contrasena,Sucursal,Activo,Rol)
+	Ciudad,Senas,FechaNacimiento,Contrasena,Sucursal,Activo,Rol)
      VALUES (108490249,'Jose','Julian','Arias','Mora','San Jose','San Pedro'
            ,'Contiguo UCR','01-10-1970'
 		   ,md5('12345'),'BombaTica Alajuela',true,'Administrador');
 
 INSERT INTO EMPLEADO(Cedula,Nombre1,Nombre2,Apellido1,Apellido2,Provincia,
-	Cuidad,Senas,FechaNacimiento,Contrasena,Sucursal,Activo,Rol)
+	Ciudad,Senas,FechaNacimiento,Contrasena,Sucursal,Activo,Rol)
      VALUES (205911452,'Marco','Luis','Quesada','Rojas','Heredia','Belen'
            ,'La Rivera de Belen','10-01-1990'
 		   ,md5('123456'),'Phischel Central',true,'Farmaceutico');
 
 INSERT INTO EMPLEADO(Cedula,Nombre1,Nombre2,Apellido1,Apellido2,Provincia,
-	Cuidad,Senas,FechaNacimiento,Contrasena,Sucursal,Activo,Rol)
+	Ciudad,Senas,FechaNacimiento,Contrasena,Sucursal,Activo,Rol)
      VALUES (405670923,'Ronny','Fabian','Romero','Nuñez','Limon','Sixaola'
            ,'contiguo a la iglesia sixaola','23-06-1987'
 		   ,md5('1234567'),'Phischel PZ',true,'Farmaceutico');
 
 INSERT INTO EMPLEADO(Cedula,Nombre1,Nombre2,Apellido1,Apellido2,Provincia,
-	Cuidad,Senas,FechaNacimiento,Contrasena,Sucursal,Activo,Rol)
+	Ciudad,Senas,FechaNacimiento,Contrasena,Sucursal,Activo,Rol)
      VALUES (505821723,'Olman','Dennis','Fajardo','Calvo','Alajuela','Poas'
            ,'carretera al volcan Poas','19-08-1973'
 		   ,md5('a12d'),'BombaTica Nicoya',true,'Farmaceutico');
 
 INSERT INTO EMPLEADO(Cedula,Nombre1,Nombre2,Apellido1,Apellido2,Provincia,
-	Cuidad,Senas,FechaNacimiento,Contrasena,Sucursal,Activo,Rol)
+	Ciudad,Senas,FechaNacimiento,Contrasena,Sucursal,Activo,Rol)
      VALUES (614580522,'Allen','Saul','McDonald','Brenes','Puntarenas','Sardinal'
            ,'ruta a Caldera','04-07-1992'
 		   ,md5 ('9gfa'),'BombaTica Alajuela',true,'Farmaceutico');
@@ -87,43 +87,43 @@ INSERT INTO PROVEEDOR(Nombre,Sede,Activo)
      VALUES('SANOFI','CR',true);
 
 INSERT INTO MEDICAMENTO(Nombre,Precio,Prescripcion,Proveedor,Activo)
-     VALUES ('Panadol ExtraFuerte',200,'0','Bayer',true);
+     VALUES ('Panadol ExtraFuerte',200,false,'Bayer',true);
 
 INSERT INTO MEDICAMENTO(Nombre,Precio,Prescripcion,Proveedor,Activo)
-     VALUES ('Gex Noche',175,'0','SANOFI',true);
+     VALUES ('Gex Noche',175,false,'SANOFI',true);
 
 INSERT INTO MEDICAMENTO(Nombre,Precio,Prescripcion,Proveedor,Activo)
-     VALUES ('Gex Día',225,'0','Pfizer',true);
+     VALUES ('Gex Día',225,false,'Pfizer',true);
 
 INSERT INTO MEDICAMENTO(Nombre,Precio,Prescripcion,Proveedor,Activo)
-     VALUES ('Inyección Insulina',12000,'1','SANOFI',true);
+     VALUES ('Inyección Insulina',12000,true,'SANOFI',true);
 
 INSERT INTO MEDICAMENTO(Nombre,Precio,Prescripcion,Proveedor,Activo)
-     VALUES ('Alka Seltzer',75,'0','Roche',true);
+     VALUES ('Alka Seltzer',75,false,'Roche',true);
 
 INSERT INTO MEDICAMENTO(Nombre,Precio,Prescripcion,Proveedor,Activo)
-     VALUES ('Panadol ULTRA',350,'0','Novaris',true);
+     VALUES ('Panadol ULTRA',350,false,'Novaris',true);
 
 INSERT INTO CLIENTE(Cedula,Nombre1,Nombre2,Apellido1,Apellido2,Provincia
-           ,Cuidad,Senas,FechaNacimiento,Prioridad,Contrasena,Activo)
+           ,Ciudad,Senas,FechaNacimiento,Prioridad,Contrasena,Activo)
      VALUES (305430785,'Raul','De los Angeles','Arias','Quesada','Cartago','Bermejo'
            ,'150 metros norte de la escuela de Bermejo','02-06-1996',1
 		   ,md5 ('rolo'),true);
 
 INSERT INTO CLIENTE(Cedula,Nombre1,Nombre2,Apellido1,Apellido2,Provincia
-           ,Cuidad,Senas,FechaNacimiento,Prioridad,Contrasena,Activo)
+           ,Ciudad,Senas,FechaNacimiento,Prioridad,Contrasena,Activo)
      VALUES (509450161,'Rony','Jose','Paniagua','Colindres','Guanacaste','Nandayure'
            ,'500 metros sur de la pulperia Don Paco','03-09-1996',1
 		   ,md5 ('pani'),true);
 
 INSERT INTO CLIENTE(Cedula,Nombre1,Nombre2,Apellido1,Apellido2,Provincia
-           ,Cuidad,Senas,FechaNacimiento,Prioridad,Contrasena,Activo)
+           ,Ciudad,Senas,FechaNacimiento,Prioridad,Contrasena,Activo)
      VALUES (116220539,'Bryan','Stephen','Abarca','Huever','San Jose','Perez Zeledon'
            ,'contiguo al bar Mis Cositas','07-11-1997',1
 		   ,md5 ('huever'),true);
 
 INSERT INTO CLIENTE(Cedula,Nombre1,Nombre2,Apellido1,Apellido2,Provincia
-           ,Cuidad,Senas,FechaNacimiento,Prioridad,Contrasena,Activo)
+           ,Ciudad,Senas,FechaNacimiento,Prioridad,Contrasena,Activo)
      VALUES (306380922,'Ronny','Nicky','Quesada','Arias','Cartago','Coris'
            ,'350 metros este de la escuela de Coris','23-09-1996',1
 		   ,md5 ('nicky'),true);

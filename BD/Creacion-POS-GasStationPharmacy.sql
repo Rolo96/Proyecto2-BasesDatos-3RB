@@ -30,7 +30,7 @@ CREATE TABLE EMPLEADO(
 	Apellido1 varchar(20) NOT NULL,
 	Apellido2 Varchar(20),
 	Provincia varchar(20) NOT NULL,
-	Cuidad varchar(20),
+	Ciudad varchar(20),
 	Senas varchar(50),
 	FechaNacimiento date NOT NULL,
 	Contrasena varchar(200) NOT NULL,
@@ -54,7 +54,7 @@ CREATE TABLE CLIENTE(
 	Apellido1 varchar(20) NOT NULL,
 	Apellido2 varchar(20),
 	Provincia varchar(20) NOT NULL,
-	Cuidad varchar(30),
+	Ciudad varchar(30),
 	Senas varchar(50),
 	FechaNacimiento date NOT NULL,
     Contrasena varchar(200) NOT NULL,
@@ -88,7 +88,7 @@ CREATE TABLE PROVEEDOR(
 CREATE TABLE MEDICAMENTO(
 	Nombre varchar(50) NOT NULL,
     Precio int NOT NULL,
-	Prescripcion bit NOT NULL,
+	Prescripcion boolean NOT NULL,
     Activo boolean NOT NULL,
 	Proveedor varchar(50) NOT NULL,
 	PRIMARY KEY (Nombre)
