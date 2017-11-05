@@ -1,0 +1,4 @@
+*.config
+*.csproj
+*.asax
+*.csproj.user
